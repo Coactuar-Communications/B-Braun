@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import bg from "../../images/startup/bg-image.jpg";
-import okaybutton from "../../images/startup/INJECTION RATE SELECTION.png";
+import okaybutton from "../../images/mainmenu/Mainmenulist.png";
 function Menu() {
   const [showImage, setShowImage] = useState(false);
 
@@ -10,9 +10,7 @@ function Menu() {
   return (
     <div>
       <div className="background-image-container">
-        {/* Render your background image here */}
         <img src={bg} alt="Background Image" />
-        {/* <button className="button">Click Me</button> */}
         {!showImage && (
           <button className="button" onClick={handleButtonClick}>
             ok

@@ -2,17 +2,25 @@ import React, { useState } from "react";
 import startup from "../../videos/startup/DEVICE.mp4";
 import bg from "../../images/startup/bg-image.jpg";
 import okaybutton from "../../images/startup/INJECTION RATE SELECTION.png";
-import Menu from "../Menu/Menu.component";
+import Menustart from "../../videos/startup/START.mp4";
 import "./videoplay.css";
 import { Link } from "react-router-dom";
 function Videoplay() {
   const [showBackgroundImage, setShowBackgroundImage] = useState(false);
   const [showImage, setShowImage] = useState(false);
+  const [hidevideo, setHidevideo] = useState(false);
+  const [outsidebuttons, setOutsidebuttons] = useState(true);
   const handleVideoEnded = () => {
     setShowBackgroundImage(true);
+    setHidevideo(false);
   };
   const handleButtonClick = () => {
     setShowImage(true);
+  };
+  const handlestart = () => {
+    setHidevideo(true);
+    setShowImage(false);
+    // setOutsidebuttons(false);
   };
   return (
     <div>
@@ -30,13 +38,26 @@ function Videoplay() {
               ok
             </button>
           )}
-          <Link to="/menu" className="menu">
-            menu
-          </Link>
+          {outsidebuttons && (
+            <Link to="/menu" className="menu">
+              menu
+            </Link>
+          )}
+
           {showImage && (
-            <div className="image-container">
-              <img src={okaybutton} alt="Displayed Image" />
+            <div>
+              <div className="image-container">
+                <img src={okaybutton} alt="Displayed Image" />
+              </div>
+              <button className="button" onClick={handlestart}>
+                start
+              </button>
             </div>
+          )}
+          {hidevideo && (
+            <video id="video_start" autoPlay muted onEnded={handleVideoEnded}>
+              <source src={Menustart} type="video/mp4" />
+            </video>
           )}
         </div>
       )}
