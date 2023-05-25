@@ -15,7 +15,8 @@ function Videoplay() {
     setHidevideo(false);
   };
   const handleButtonClick = () => {
-    setShowImage(true);
+    // setShowImage(true);
+    setHidevideo(true);
   };
   const handlestart = () => {
     setHidevideo(true);
