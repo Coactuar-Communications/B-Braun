@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import bg from "../../images/startup/bg-image.jpg";
-import okaybutton from "../../images/mainmenu/Mainmenulist.png";
+import mainMenu from "../../images/startup/B-BRAUN MAIN MENU.png";
+import okaybutton from "../../images/mainmenu/Overview.png";
+import bg from "../../images/mainmenu/bg.png";
+import { Link } from "react-router-dom";
+import "./Menu.css";
 function Menu() {
   const [showImage, setShowImage] = useState(false);
   const [buttonhide, setbuttonhide] = useState(false);
