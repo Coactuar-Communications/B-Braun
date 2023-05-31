@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import "../Fonts/RotisSerif-Bold.ttf";
+import "../Fonts/Rotis Sans Serif Std 75 Extra Bold.otf";
 import {
     MDBBtn,
     MDBContainer,

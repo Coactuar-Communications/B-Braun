@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Videoplay from "./component/videoplay/Videoplay.component";
 import Login from "./component/Login.component";
 import Rate from "./component/Menu/Rate.component";
-import "./Fonts/Rotis Sans Serif Std 45 Light.otf";
+import "./Fonts/Rotis Sans Serif Std 75 Extra Bold.otf";
 function App() {
   return (
     <Routes>

@@ -12,9 +12,9 @@ body {
     ); */
 }
 @font-face {
-  font-family: "Light";   /*Can be any text*/
+  font-family: "Bold";   /*Can be any text*/
   src: local("SourceSerifPro"),
-    url("../Fonts/Rotis Sans Serif Std 45 Light.otf") format("truetype");
+    url("../Fonts/Rotis Sans Serif Std 75 Extra Bold.otf") format("truetype");
 }
 .form-bg {
 }
