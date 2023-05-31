@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import startup from "../../videos/startup/DEVICE.mp4";
+import startup from "../../images/startup/B-Braun Startup Revised.mp4";
 import bg from "../../images/startup/bg-image.jpg";
 import okaybutton from "../../images/startup/INJECTION RATE SELECTION.png";
 import Menustart from "../../videos/startup/START.mp4";
@@ -20,10 +20,10 @@ function Videoplay() {
   const handlestart = () => {
     setHidevideo(true);
     setShowImage(false);
-    // setOutsidebuttons(false);
+    setOutsidebuttons(true);
   };
   return (
-    <div>
+    <div className="video">
       {!showBackgroundImage ? (
         <video id="video" autoPlay muted onEnded={handleVideoEnded}>
           <source src={startup} type="video/mp4" />
@@ -39,9 +39,14 @@ function Videoplay() {
             </button>
           )}
           {outsidebuttons && (
+            <>
             <Link to="/menu" className="menu">
               menu
             </Link>
+              <Link to="/menu" className="menu2">
+              BOL
+            </Link>
+            </>
           )}
 
           {showImage && (
@@ -49,13 +54,13 @@ function Videoplay() {
               <div className="image-container">
                 <img src={okaybutton} alt="Displayed Image" />
               </div>
-              <button className="button" onClick={handlestart}>
+              <button className="start-button" onClick={handlestart}>
                 start
               </button>
             </div>
           )}
           {hidevideo && (
-            <video id="video_start" autoPlay muted onEnded={handleVideoEnded}>
+            <video id="video_start" autoPlay muted onEnded={handleVideoEnded} width={100}>
               <source src={Menustart} type="video/mp4" />
             </video>
           )}

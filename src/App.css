@@ -50,3 +50,12 @@
     width: 400px;
     height: auto;
 }
+
+video{
+    text-align: center;
+}
+
+button{
+    color:transparent;
+}
+

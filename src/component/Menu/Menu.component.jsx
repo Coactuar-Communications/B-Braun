@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import bg from "../../images/startup/bg-image.jpg";
-import okaybutton from "../../images/mainmenu/Mainmenulist.png";
+import mainMenu from "../../images/startup/B-BRAUN MAIN MENU.png";
+import okaybutton from "../../images/mainmenu/Overview.png";
 function Menu() {
   const [showImage, setShowImage] = useState(false);
 
@@ -10,7 +10,7 @@ function Menu() {
   return (
     <div>
       <div className="background-image-container">
-        <img src={bg} alt="Background Image" />
+        <img src={mainMenu} alt="Background Image" />
         {!showImage && (
           <button className="button" onClick={handleButtonClick}>
             ok
